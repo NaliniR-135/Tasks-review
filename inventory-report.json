@@ -1,0 +1,1360 @@
+[
+   {
+      "ID": 1,
+      "Name": "Essence Mascara Lash Princess",
+      "Stock": 99,
+      "InventoryValue": 989.01,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 2,
+      "Name": "Eyeshadow Palette with Mirror",
+      "Stock": 34,
+      "InventoryValue": 679.66,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 3,
+      "Name": "Powder Canister",
+      "Stock": 89,
+      "InventoryValue": 1334.1100000000001,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 4,
+      "Name": "Red Lipstick",
+      "Stock": 91,
+      "InventoryValue": 1182.09,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 5,
+      "Name": "Red Nail Polish",
+      "Stock": 79,
+      "InventoryValue": 710.21,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 6,
+      "Name": "Calvin Klein CK One",
+      "Stock": 29,
+      "InventoryValue": 1449.71,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 7,
+      "Name": "Chanel Coco Noir Eau De",
+      "Stock": 58,
+      "InventoryValue": 7539.42,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 8,
+      "Name": "Dior J'adore",
+      "Stock": 98,
+      "InventoryValue": 8819.019999999999,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 9,
+      "Name": "Dolce Shine Eau de",
+      "Stock": 4,
+      "InventoryValue": 279.96,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 10,
+      "Name": "Gucci Bloom Eau de",
+      "Stock": 91,
+      "InventoryValue": 7279.089999999999,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 11,
+      "Name": "Annibale Colombo Bed",
+      "Stock": 88,
+      "InventoryValue": 167199.12,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 12,
+      "Name": "Annibale Colombo Sofa",
+      "Stock": 60,
+      "InventoryValue": 149999.4,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 13,
+      "Name": "Bedside Table African Cherry",
+      "Stock": 64,
+      "InventoryValue": 19199.36,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 14,
+      "Name": "Knoll Saarinen Executive Conference Chair",
+      "Stock": 26,
+      "InventoryValue": 12999.74,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 15,
+      "Name": "Wooden Bathroom Sink With Mirror",
+      "Stock": 7,
+      "InventoryValue": 5599.93,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 16,
+      "Name": "Apple",
+      "Stock": 8,
+      "InventoryValue": 15.92,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 17,
+      "Name": "Beef Steak",
+      "Stock": 86,
+      "InventoryValue": 1117.14,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 18,
+      "Name": "Cat Food",
+      "Stock": 46,
+      "InventoryValue": 413.54,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 19,
+      "Name": "Chicken Meat",
+      "Stock": 97,
+      "InventoryValue": 969.03,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 20,
+      "Name": "Cooking Oil",
+      "Stock": 10,
+      "InventoryValue": 49.900000000000006,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 21,
+      "Name": "Cucumber",
+      "Stock": 84,
+      "InventoryValue": 125.16,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 22,
+      "Name": "Dog Food",
+      "Stock": 71,
+      "InventoryValue": 780.29,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 23,
+      "Name": "Eggs",
+      "Stock": 9,
+      "InventoryValue": 26.910000000000004,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 24,
+      "Name": "Fish Steak",
+      "Stock": 74,
+      "InventoryValue": 1109.26,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 25,
+      "Name": "Green Bell Pepper",
+      "Stock": 33,
+      "InventoryValue": 42.57,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 26,
+      "Name": "Green Chili Pepper",
+      "Stock": 3,
+      "InventoryValue": 2.9699999999999998,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 27,
+      "Name": "Honey Jar",
+      "Stock": 34,
+      "InventoryValue": 237.66,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 28,
+      "Name": "Ice Cream",
+      "Stock": 27,
+      "InventoryValue": 148.23000000000002,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 29,
+      "Name": "Juice",
+      "Stock": 50,
+      "InventoryValue": 199.5,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 30,
+      "Name": "Kiwi",
+      "Stock": 99,
+      "InventoryValue": 246.51000000000002,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 31,
+      "Name": "Lemon",
+      "Stock": 31,
+      "InventoryValue": 24.490000000000002,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 32,
+      "Name": "Milk",
+      "Stock": 27,
+      "InventoryValue": 94.23,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 33,
+      "Name": "Mulberry",
+      "Stock": 99,
+      "InventoryValue": 494.01000000000005,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 34,
+      "Name": "Nescafe Coffee",
+      "Stock": 57,
+      "InventoryValue": 455.43,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 35,
+      "Name": "Potatoes",
+      "Stock": 13,
+      "InventoryValue": 29.77,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 36,
+      "Name": "Protein Powder",
+      "Stock": 80,
+      "InventoryValue": 1599.1999999999998,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 37,
+      "Name": "Red Onions",
+      "Stock": 82,
+      "InventoryValue": 163.18,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 38,
+      "Name": "Rice",
+      "Stock": 59,
+      "InventoryValue": 353.41,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 39,
+      "Name": "Soft Drinks",
+      "Stock": 53,
+      "InventoryValue": 105.47,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 40,
+      "Name": "Strawberry",
+      "Stock": 46,
+      "InventoryValue": 183.54000000000002,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 41,
+      "Name": "Tissue Paper Box",
+      "Stock": 86,
+      "InventoryValue": 214.14000000000001,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 42,
+      "Name": "Water",
+      "Stock": 53,
+      "InventoryValue": 52.47,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 43,
+      "Name": "Decoration Swing",
+      "Stock": 47,
+      "InventoryValue": 2819.53,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 44,
+      "Name": "Family Tree Photo Frame",
+      "Stock": 77,
+      "InventoryValue": 2309.23,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 45,
+      "Name": "House Showpiece Plant",
+      "Stock": 28,
+      "InventoryValue": 1119.72,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 46,
+      "Name": "Plant Pot",
+      "Stock": 59,
+      "InventoryValue": 884.41,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 47,
+      "Name": "Table Lamp",
+      "Stock": 9,
+      "InventoryValue": 449.91,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 48,
+      "Name": "Bamboo Spatula",
+      "Stock": 37,
+      "InventoryValue": 295.63,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 49,
+      "Name": "Black Aluminium Cup",
+      "Stock": 75,
+      "InventoryValue": 449.25,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 50,
+      "Name": "Black Whisk",
+      "Stock": 73,
+      "InventoryValue": 729.27,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 51,
+      "Name": "Boxed Blender",
+      "Stock": 9,
+      "InventoryValue": 359.91,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 52,
+      "Name": "Carbon Steel Wok",
+      "Stock": 40,
+      "InventoryValue": 1199.6,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 53,
+      "Name": "Chopping Board",
+      "Stock": 14,
+      "InventoryValue": 181.86,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 54,
+      "Name": "Citrus Squeezer Yellow",
+      "Stock": 22,
+      "InventoryValue": 197.78,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 55,
+      "Name": "Egg Slicer",
+      "Stock": 40,
+      "InventoryValue": 279.6,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 56,
+      "Name": "Electric Stove",
+      "Stock": 21,
+      "InventoryValue": 1049.79,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 57,
+      "Name": "Fine Mesh Strainer",
+      "Stock": 85,
+      "InventoryValue": 849.15,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 58,
+      "Name": "Fork",
+      "Stock": 7,
+      "InventoryValue": 27.93,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 59,
+      "Name": "Glass",
+      "Stock": 46,
+      "InventoryValue": 229.54000000000002,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 60,
+      "Name": "Grater Black",
+      "Stock": 84,
+      "InventoryValue": 923.16,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 61,
+      "Name": "Hand Blender",
+      "Stock": 84,
+      "InventoryValue": 2939.1600000000003,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 62,
+      "Name": "Ice Cube Tray",
+      "Stock": 13,
+      "InventoryValue": 77.87,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 63,
+      "Name": "Kitchen Sieve",
+      "Stock": 68,
+      "InventoryValue": 543.32,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 64,
+      "Name": "Knife",
+      "Stock": 7,
+      "InventoryValue": 104.93,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 65,
+      "Name": "Lunch Box",
+      "Stock": 94,
+      "InventoryValue": 1221.06,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 66,
+      "Name": "Microwave Oven",
+      "Stock": 59,
+      "InventoryValue": 5309.41,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 67,
+      "Name": "Mug Tree Stand",
+      "Stock": 88,
+      "InventoryValue": 1407.1200000000001,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 68,
+      "Name": "Pan",
+      "Stock": 90,
+      "InventoryValue": 2249.1,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 69,
+      "Name": "Plate",
+      "Stock": 66,
+      "InventoryValue": 263.34000000000003,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 70,
+      "Name": "Red Tongs",
+      "Stock": 82,
+      "InventoryValue": 573.1800000000001,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 71,
+      "Name": "Silver Pot With Glass Cap",
+      "Stock": 40,
+      "InventoryValue": 1599.6000000000001,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 72,
+      "Name": "Slotted Turner",
+      "Stock": 88,
+      "InventoryValue": 791.12,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 73,
+      "Name": "Spice Rack",
+      "Stock": 79,
+      "InventoryValue": 1579.2099999999998,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 74,
+      "Name": "Spoon",
+      "Stock": 59,
+      "InventoryValue": 294.41,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 75,
+      "Name": "Tray",
+      "Stock": 71,
+      "InventoryValue": 1206.29,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 76,
+      "Name": "Wooden Rolling Pin",
+      "Stock": 80,
+      "InventoryValue": 959.2,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 77,
+      "Name": "Yellow Peeler",
+      "Stock": 35,
+      "InventoryValue": 209.65,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 78,
+      "Name": "Apple MacBook Pro 14 Inch Space Grey",
+      "Stock": 24,
+      "InventoryValue": 47999.76,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 79,
+      "Name": "Asus Zenbook Pro Dual Screen Laptop",
+      "Stock": 45,
+      "InventoryValue": 80999.55,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 80,
+      "Name": "Huawei Matebook X Pro",
+      "Stock": 75,
+      "InventoryValue": 104999.25,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 81,
+      "Name": "Lenovo Yoga 920",
+      "Stock": 40,
+      "InventoryValue": 43999.6,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 82,
+      "Name": "New DELL XPS 13 9300 Laptop",
+      "Stock": 74,
+      "InventoryValue": 110999.26,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 83,
+      "Name": "Blue & Black Check Shirt",
+      "Stock": 38,
+      "InventoryValue": 1139.62,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 84,
+      "Name": "Gigabyte Aorus Men Tshirt",
+      "Stock": 90,
+      "InventoryValue": 2249.1,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 85,
+      "Name": "Man Plaid Shirt",
+      "Stock": 82,
+      "InventoryValue": 2869.1800000000003,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 86,
+      "Name": "Man Short Sleeve Shirt",
+      "Stock": 2,
+      "InventoryValue": 39.98,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 87,
+      "Name": "Men Check Shirt",
+      "Stock": 95,
+      "InventoryValue": 2659.0499999999997,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 88,
+      "Name": "Nike Air Jordan 1 Red And Black",
+      "Stock": 7,
+      "InventoryValue": 1049.93,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 89,
+      "Name": "Nike Baseball Cleats",
+      "Stock": 12,
+      "InventoryValue": 959.8799999999999,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 90,
+      "Name": "Puma Future Rider Trainers",
+      "Stock": 90,
+      "InventoryValue": 8099.099999999999,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 91,
+      "Name": "Sports Sneakers Off White & Red",
+      "Stock": 17,
+      "InventoryValue": 2039.83,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 92,
+      "Name": "Sports Sneakers Off White Red",
+      "Stock": 62,
+      "InventoryValue": 6819.38,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 93,
+      "Name": "Brown Leather Belt Watch",
+      "Stock": 32,
+      "InventoryValue": 2879.68,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 94,
+      "Name": "Longines Master Collection",
+      "Stock": 100,
+      "InventoryValue": 149999,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 95,
+      "Name": "Rolex Cellini Date Black Dial",
+      "Stock": 40,
+      "InventoryValue": 359999.6,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 96,
+      "Name": "Rolex Cellini Moonphase",
+      "Stock": 36,
+      "InventoryValue": 467999.64,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 97,
+      "Name": "Rolex Datejust",
+      "Stock": 86,
+      "InventoryValue": 945999.14,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 98,
+      "Name": "Rolex Submariner Watch",
+      "Stock": 55,
+      "InventoryValue": 769999.45,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 99,
+      "Name": "Amazon Echo Plus",
+      "Stock": 61,
+      "InventoryValue": 6099.389999999999,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 100,
+      "Name": "Apple Airpods",
+      "Stock": 67,
+      "InventoryValue": 8709.33,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 101,
+      "Name": "Apple AirPods Max Silver",
+      "Stock": 59,
+      "InventoryValue": 32449.41,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 102,
+      "Name": "Apple Airpower Wireless Charger",
+      "Stock": 1,
+      "InventoryValue": 79.99,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 103,
+      "Name": "Apple HomePod Mini Cosmic Grey",
+      "Stock": 27,
+      "InventoryValue": 2699.73,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 104,
+      "Name": "Apple iPhone Charger",
+      "Stock": 31,
+      "InventoryValue": 619.6899999999999,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 105,
+      "Name": "Apple MagSafe Battery Pack",
+      "Stock": 1,
+      "InventoryValue": 99.99,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 106,
+      "Name": "Apple Watch Series 4 Gold",
+      "Stock": 33,
+      "InventoryValue": 11549.67,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 107,
+      "Name": "Beats Flex Wireless Earphones",
+      "Stock": 50,
+      "InventoryValue": 2499.5,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 108,
+      "Name": "iPhone 12 Silicone Case with MagSafe Plum",
+      "Stock": 69,
+      "InventoryValue": 2069.31,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 109,
+      "Name": "Monopod",
+      "Stock": 48,
+      "InventoryValue": 959.52,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 110,
+      "Name": "Selfie Lamp with iPhone",
+      "Stock": 58,
+      "InventoryValue": 869.42,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 111,
+      "Name": "Selfie Stick Monopod",
+      "Stock": 11,
+      "InventoryValue": 142.89000000000001,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 112,
+      "Name": "TV Studio Camera Pedestal",
+      "Stock": 15,
+      "InventoryValue": 7499.85,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 113,
+      "Name": "Generic Motorcycle",
+      "Stock": 34,
+      "InventoryValue": 135999.66,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 114,
+      "Name": "Kawasaki Z800",
+      "Stock": 52,
+      "InventoryValue": 467999.48,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 115,
+      "Name": "MotoGP CI.H1",
+      "Stock": 10,
+      "InventoryValue": 149999.9,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 116,
+      "Name": "Scooter Motorcycle",
+      "Stock": 84,
+      "InventoryValue": 251999.15999999997,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 117,
+      "Name": "Sportbike Motorcycle",
+      "Stock": 0,
+      "InventoryValue": 0,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 118,
+      "Name": "Attitude Super Leaves Hand Soap",
+      "Stock": 94,
+      "InventoryValue": 845.0600000000001,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 119,
+      "Name": "Olay Ultra Moisture Shea Butter Body Wash",
+      "Stock": 34,
+      "InventoryValue": 441.66,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 120,
+      "Name": "Vaseline Men Body and Face Lotion",
+      "Stock": 95,
+      "InventoryValue": 949.0500000000001,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 121,
+      "Name": "iPhone 5s",
+      "Stock": 25,
+      "InventoryValue": 4999.75,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 122,
+      "Name": "iPhone 6",
+      "Stock": 60,
+      "InventoryValue": 17999.4,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 123,
+      "Name": "iPhone 13 Pro",
+      "Stock": 56,
+      "InventoryValue": 61599.44,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 124,
+      "Name": "iPhone X",
+      "Stock": 37,
+      "InventoryValue": 33299.63,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 125,
+      "Name": "Oppo A57",
+      "Stock": 19,
+      "InventoryValue": 4749.81,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 126,
+      "Name": "Oppo F19 Pro Plus",
+      "Stock": 78,
+      "InventoryValue": 31199.22,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 127,
+      "Name": "Oppo K1",
+      "Stock": 55,
+      "InventoryValue": 16499.45,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 128,
+      "Name": "Realme C35",
+      "Stock": 48,
+      "InventoryValue": 7199.52,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 129,
+      "Name": "Realme X",
+      "Stock": 12,
+      "InventoryValue": 3599.88,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 130,
+      "Name": "Realme XT",
+      "Stock": 80,
+      "InventoryValue": 27999.2,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 131,
+      "Name": "Samsung Galaxy S7",
+      "Stock": 67,
+      "InventoryValue": 20099.33,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 132,
+      "Name": "Samsung Galaxy S8",
+      "Stock": 0,
+      "InventoryValue": 0,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 133,
+      "Name": "Samsung Galaxy S10",
+      "Stock": 19,
+      "InventoryValue": 13299.81,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 134,
+      "Name": "Vivo S1",
+      "Stock": 50,
+      "InventoryValue": 12499.5,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 135,
+      "Name": "Vivo V9",
+      "Stock": 82,
+      "InventoryValue": 24599.18,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 136,
+      "Name": "Vivo X21",
+      "Stock": 7,
+      "InventoryValue": 3499.9300000000003,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 137,
+      "Name": "American Football",
+      "Stock": 53,
+      "InventoryValue": 1059.47,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 138,
+      "Name": "Baseball Ball",
+      "Stock": 100,
+      "InventoryValue": 899,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 139,
+      "Name": "Baseball Glove",
+      "Stock": 22,
+      "InventoryValue": 549.78,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 140,
+      "Name": "Basketball",
+      "Stock": 75,
+      "InventoryValue": 1124.25,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 141,
+      "Name": "Basketball Rim",
+      "Stock": 43,
+      "InventoryValue": 1719.5700000000002,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 142,
+      "Name": "Cricket Ball",
+      "Stock": 30,
+      "InventoryValue": 389.7,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 143,
+      "Name": "Cricket Bat",
+      "Stock": 98,
+      "InventoryValue": 2939.02,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 144,
+      "Name": "Cricket Helmet",
+      "Stock": 10,
+      "InventoryValue": 449.90000000000003,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 145,
+      "Name": "Cricket Wicket",
+      "Stock": 25,
+      "InventoryValue": 749.75,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 146,
+      "Name": "Feather Shuttlecock",
+      "Stock": 95,
+      "InventoryValue": 569.0500000000001,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 147,
+      "Name": "Football",
+      "Stock": 96,
+      "InventoryValue": 1727.04,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 148,
+      "Name": "Golf Ball",
+      "Stock": 84,
+      "InventoryValue": 839.16,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 149,
+      "Name": "Iron Golf",
+      "Stock": 90,
+      "InventoryValue": 4499.1,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 150,
+      "Name": "Metal Baseball Bat",
+      "Stock": 16,
+      "InventoryValue": 479.84,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 151,
+      "Name": "Tennis Ball",
+      "Stock": 28,
+      "InventoryValue": 195.72,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 152,
+      "Name": "Tennis Racket",
+      "Stock": 6,
+      "InventoryValue": 299.94,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 153,
+      "Name": "Volleyball",
+      "Stock": 0,
+      "InventoryValue": 0,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 154,
+      "Name": "Black Sun Glasses",
+      "Stock": 60,
+      "InventoryValue": 1799.3999999999999,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 155,
+      "Name": "Classic Sun Glasses",
+      "Stock": 1,
+      "InventoryValue": 24.99,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 156,
+      "Name": "Green and Black Glasses",
+      "Stock": 24,
+      "InventoryValue": 839.76,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 157,
+      "Name": "Party Glasses",
+      "Stock": 86,
+      "InventoryValue": 1719.1399999999999,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 158,
+      "Name": "Sunglasses",
+      "Stock": 27,
+      "InventoryValue": 620.7299999999999,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 159,
+      "Name": "iPad Mini 2021 Starlight",
+      "Stock": 47,
+      "InventoryValue": 23499.53,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 160,
+      "Name": "Samsung Galaxy Tab S8 Plus Grey",
+      "Stock": 62,
+      "InventoryValue": 37199.38,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 161,
+      "Name": "Samsung Galaxy Tab White",
+      "Stock": 92,
+      "InventoryValue": 32199.08,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 162,
+      "Name": "Blue Frock",
+      "Stock": 52,
+      "InventoryValue": 1559.48,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 163,
+      "Name": "Girl Summer Dress",
+      "Stock": 43,
+      "InventoryValue": 859.5699999999999,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 164,
+      "Name": "Gray Dress",
+      "Stock": 55,
+      "InventoryValue": 1924.45,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 165,
+      "Name": "Short Frock",
+      "Stock": 22,
+      "InventoryValue": 549.78,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 166,
+      "Name": "Tartan Dress",
+      "Stock": 73,
+      "InventoryValue": 2919.27,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 167,
+      "Name": "300 Touring",
+      "Stock": 54,
+      "InventoryValue": 1565999.4600000002,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 168,
+      "Name": "Charger SXT RWD",
+      "Stock": 57,
+      "InventoryValue": 1880999.43,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 169,
+      "Name": "Dodge Hornet GT Plus",
+      "Stock": 82,
+      "InventoryValue": 2049999.1800000002,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 170,
+      "Name": "Durango SXT RWD",
+      "Stock": 95,
+      "InventoryValue": 3514999.05,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 171,
+      "Name": "Pacifica Touring",
+      "Stock": 53,
+      "InventoryValue": 1695999.47,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 172,
+      "Name": "Blue Women's Handbag",
+      "Stock": 76,
+      "InventoryValue": 3799.2400000000002,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 173,
+      "Name": "Heshe Women's Leather Bag",
+      "Stock": 99,
+      "InventoryValue": 12869.01,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 174,
+      "Name": "Prada Women Bag",
+      "Stock": 75,
+      "InventoryValue": 44999.25,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 175,
+      "Name": "White Faux Leather Backpack",
+      "Stock": 39,
+      "InventoryValue": 1559.6100000000001,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 176,
+      "Name": "Women Handbag Black",
+      "Stock": 11,
+      "InventoryValue": 659.89,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 177,
+      "Name": "Black Women's Gown",
+      "Stock": 25,
+      "InventoryValue": 3249.75,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 178,
+      "Name": "Corset Leather With Skirt",
+      "Stock": 30,
+      "InventoryValue": 2699.7,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 179,
+      "Name": "Corset With Black Skirt",
+      "Stock": 33,
+      "InventoryValue": 2639.6699999999996,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 180,
+      "Name": "Dress Pea",
+      "Stock": 6,
+      "InventoryValue": 299.94,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 181,
+      "Name": "Marni Red & Black Suit",
+      "Stock": 62,
+      "InventoryValue": 11159.380000000001,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 182,
+      "Name": "Green Crystal Earring",
+      "Stock": 54,
+      "InventoryValue": 1619.4599999999998,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 183,
+      "Name": "Green Oval Earring",
+      "Stock": 73,
+      "InventoryValue": 1824.27,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 184,
+      "Name": "Tropical Earring",
+      "Stock": 1,
+      "InventoryValue": 19.99,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 185,
+      "Name": "Black & Brown Slipper",
+      "Stock": 3,
+      "InventoryValue": 59.97,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 186,
+      "Name": "Calvin Klein Heel Shoes",
+      "Stock": 93,
+      "InventoryValue": 7439.07,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 187,
+      "Name": "Golden Shoes Woman",
+      "Stock": 88,
+      "InventoryValue": 4399.12,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 188,
+      "Name": "Pampi Shoes",
+      "Stock": 49,
+      "InventoryValue": 1469.51,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 189,
+      "Name": "Red Shoes",
+      "Stock": 7,
+      "InventoryValue": 244.93,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 190,
+      "Name": "IWC Ingenieur Automatic Steel",
+      "Stock": 90,
+      "InventoryValue": 449999.1,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 191,
+      "Name": "Rolex Cellini Moonphase",
+      "Stock": 52,
+      "InventoryValue": 831999.48,
+      "Status": "IN_STOCK"
+   },
+   {
+      "ID": 192,
+      "Name": "Rolex Datejust Women",
+      "Stock": 4,
+      "InventoryValue": 43999.96,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 193,
+      "Name": "Watch Gold for Women",
+      "Stock": 0,
+      "InventoryValue": 0,
+      "Status": "LOW_STOCK"
+   },
+   {
+      "ID": 194,
+      "Name": "Women's Wrist Watch",
+      "Stock": 12,
+      "InventoryValue": 1559.88,
+      "Status": "LOW_STOCK"
+   }
+]
