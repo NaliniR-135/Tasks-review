@@ -18,9 +18,9 @@ async function scrapping() {
   await page.select("#cboReportType", "Circular Letters");
 
   // Set the From date
-//   await page.$eval("#date-from", el => {
-//     el.value = "01/01/2024";
-//   });
+  await page.$eval("#date-from", el => {
+     el.value = "01/01/2024";
+  });
   
   await new Promise(resolve => setTimeout(resolve, 30000));
 
