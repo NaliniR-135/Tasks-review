@@ -11,7 +11,7 @@ async function collectUrlsOnCurrentPage(page, urls) {
     var html = await page.content();
     var $ = cheerio.load(html);
 
-    $("#RegTable tbody tr").each(function (i, element) {
+    $("#RegTable tbody tr").each((i, element) => {
         var link = $(element).find("a").first().attr("href");
         urls.push(link);
     });
@@ -23,9 +23,14 @@ async function isLastPage(page) {
     });
     return disabled;
 }
+// async function isLastPage(page) {
+//     return await page.$eval("#RegTable_next", btn => {
+//         return btn.getAttribute("class").includes("disabled");
+//     });
+// }
 
 async function scrappingData() {
-    console.log("Opening browser...");
+    console.log("Opening browser");
     var browser = await puppeteer.launch({ 
       headless: true 
     });
@@ -51,7 +56,7 @@ async function scrappingData() {
     await wait(500);
 
     await page.click("#btnRefresh");
-    console.log("Filters applied. Waiting for results to load...");
+    console.log("Finished button click, waiting for urls");
 
     await wait(20000);
     console.log("Collecting URLs...");
