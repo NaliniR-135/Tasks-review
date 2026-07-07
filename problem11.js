@@ -95,9 +95,9 @@ async function main(){
     await page.goto(url, {
         waitUntil: "networkidle2"
     });
-    console.log("Opened HEX page");
+    console.log("Opened HkEX page");
 
-    await delay(4000);
+    await delay(8000);
     
     //calling the function scrollUntillEnd
     await scrollUntillEnd(page);
