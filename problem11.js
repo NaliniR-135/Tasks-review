@@ -25,12 +25,13 @@ async function scrollUntillEnd(page){
         }
 
         //we scroll tot the bottom of the webpage
-        await page.evaluate(() => {
-            window.scrollTo(0, document.body.scrollHeight)
-        });
+        // await page.evaluate(() => {
+        //     window.scrollTo(0, document.body.scrollHeight)
+        // });
+        await page.mouse.wheel({ deltaY: 5000 }); // scroll down 5000px
 
         //after reaching down we wait for smtime for the next articles to load
-        await delay(10000);
+        await delay(13000);
 
         //we shd count again the new articles 
         const newCount  = await page.$$eval(".whats_on_tdy_row", (elements) => elements.length);
@@ -44,7 +45,7 @@ async function scrollUntillEnd(page){
             noChangeTimes = 0;
         }
         if (noChangeTimes >= 20) {
-            console.log("Page stopped loading new articles. Moving on.");
+            console.log("Page stopped loading new articles");
             break;
         }
     }
@@ -97,7 +98,7 @@ async function main(){
     });
     console.log("Opened HkEX page");
 
-    await delay(8000);
+    await delay(10000);
     
     //calling the function scrollUntillEnd
     await scrollUntillEnd(page);
@@ -106,7 +107,7 @@ async function main(){
 
     const articles = await extractData(html);
 
-    fs.writeFileSync("HEX.json", JSON.stringify(articles, null, 3));
+    fs.writeFileSync("HKEX.json", JSON.stringify(articles, null, 3));
     console.log("File created and written");
 
     await browser.close();
