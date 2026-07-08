@@ -28,9 +28,11 @@ async function scrollUntillEnd(page){
         // await page.evaluate(() => {
         //     window.scrollTo(0, document.body.scrollHeight)
         // });
-        await page.mouse.wheel({ deltaY: 5000 }); // scroll down 5000px
+        await page.evaluate(() => {
+            document.documentElement.scrollTop = document.documentElement.scrollHeight;
+            document.body.scrollTop = document.body.scrollHeight;
+        });
 
-        //after reaching down we wait for smtime for the next articles to load
         await delay(13000);
 
         //we shd count again the new articles 
