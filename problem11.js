@@ -1,3 +1,5 @@
+//this was using puppeteer and cheerios scrape the data from a website that has lazy loading
+
 const puppeteer = require("puppeteer");
 const cheerio = require("cheerio");
 const fs = require("fs");
