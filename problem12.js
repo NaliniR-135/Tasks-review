@@ -191,80 +191,243 @@
 
 // main();
 
+// const puppeteer = require("puppeteer");
+// const cheerio   = require("cheerio");
+// const fs        = require("fs");
+
+// const YEARS_BACK = 3;
+// const STOP_YEAR  = new Date().getFullYear() - YEARS_BACK;
+
+// const COLUMNS = [
+//   { key: "column1", url: "https://www.ins.gov.co/buscador-eventos/Informesdeevento/Forms/AllItems.aspx" },
+//   { key: "column2", url: "https://www.ins.gov.co/buscador-eventos/tablerosdecontrol/Forms/AllItems.aspx" },
+//   { key: "column3", url: "https://www.ins.gov.co/buscador-eventos/Tableros%20de%20control%20de%20laboratorio/Forms/AllItems.aspx" },
+// ];
+
+// function delay(ms){
+//   return new Promise((resolve) => setTimeout(resolve, ms));
+// }
+
+// // Get page HTML if the frame detached, wait and try once more
+// async function getHtml(page) {
+//     return await page.content();
+// }
+
+// // Click a group toggle to expand it
+// async function clickGroup(page, groupId) {
+//   await page.evaluate((id) => {
+//     document.querySelectorAll(`a[onclick*="'${id}'"]`).forEach((a) => a.click());
+//   }, groupId);
+//   await delay(2500);
+// }
+
+// // Parse all year groups and their events from HTML
+// function parseYearGroups(html) {
+//   const $ = cheerio.load(html);
+//   const groups = [];
+//   let current = null;
+
+//   $("tr").each((index, row) => {
+//     const toggle = $(row).find('a[onclick*="ExpCollGroup"]');
+//     if (!toggle.length){
+//       return;
+//     }
+//     const match = (toggle.attr("onclick") ?? "").match(/ExpCollGroup\('([^']+)'/);
+//     if (!match){
+//       return;
+//     }
+
+//     const groupId = match[1];
+//     const text = $(row).text().trim();
+//     const yearMatch = text.match(/Año\s*:\s*(\d{4})\s*\(/);
+//     const eventMatch = text.match(/Evento\s*:\s*(.+?)\s*\(\d+\)/);
+
+//     if (yearMatch) {
+//       const year = parseInt(yearMatch[1]);
+//       current = year > STOP_YEAR ? { year, groupId, events: [] } : null;
+//       if (current){
+//         groups.push(current);
+//       }
+//     } else if (eventMatch && current) {
+//       current.events.push({ name: eventMatch[1].trim(), groupId });
+//     }
+//   });
+
+//   return groups.sort((a, b) => a.year - b.year);
+// }
+
+// // Get all visible file links from HTML
+// function getLinks(html) {
+//   const $ = cheerio.load(html);
+//   const links = [];
+
+//   $("tr").each((_, row) => {
+//     if ($(row).find('a[onclick*="ExpCollGroup"]').length) return;
+
+//     $(row).find("a[href]").each((_, a) => {
+//       const href = $(a).attr("href") ?? "";
+//       const name = $(a).text().trim();
+//       if (href && !href.startsWith("javascript") && href.includes("/buscador-eventos") && name) {
+//         links.push({ name, url: href.startsWith("http") ? href : `https://www.ins.gov.co${href}` });
+//       }
+//     });
+//   });
+
+//   return links;
+// }
+
+// // Expand a group and return only the new links that appeared
+// async function expandAndCollect(page, groupId) {
+//   const before = new Set(getLinks(await getHtml(page)).map((l) => l.url));
+//   await clickGroup(page, groupId);
+//   return getLinks(await getHtml(page)).filter((l) => !before.has(l.url));
+// }
+
+// // Scrape one column — if it crashes mid-way, reload and reexpand all done groups then continue
+// async function scrapeColumn(page, column) {
+//   console.log(`\nScraping ${column.key}`);
+//   await page.goto(column.url, { 
+//     waitUntil: "networkidle2", 
+//     timeout: 90000 
+//   });
+
+//   const title = (await page.title()).split(" - ")[0].trim() || column.key;
+//   const yearGroups = parseYearGroups(await getHtml(page));
+//   const results = {};
+
+//   for (const yr of yearGroups) {
+//     console.log(`Year ${yr.year} — ${yr.events.length} event(s)`);
+//     results[yr.year] = [];
+
+//     const items = yr.events.length === 0
+//       ? [{ name: "(no_events)", groupId: yr.groupId }]
+//       : yr.events;
+
+//     for (const item of items) {
+//       let docs;
+//       let retries = 0;
+
+//       while (true) {
+//         try {
+//           docs = await expandAndCollect(page, item.groupId);
+//           break;
+//         } catch (err) {
+//           if (!err.message.includes("detached") || retries >= 3) throw err;
+
+//           retries++;
+//           console.log(`Frame detached on [${item.name}] — reloading page (attempt ${retries})...`);
+
+//           // Reload and reexpand everything we already processed so the DOM state matches
+//           await page.goto(column.url, { 
+//             waitUntil: "networkidle2", 
+//             timeout: 90000 
+//           });
+
+//           // Reexpand the year group first
+//           await clickGroup(page, yr.groupId);
+
+//           // Reexpand all events we already collected for this year so links are visible
+//           for (const done of results[yr.year]) {
+//             const doneItem = items.find((i) => i.name === done.event);
+//             if (doneItem) await clickGroup(page, doneItem.groupId);
+//           }
+//         }
+//       }
+
+//       console.log(`[${item.name}] → ${docs.length} file(s)`);
+//       results[yr.year].push({ 
+//         event: item.name, 
+//         documents: docs 
+//       });
+//     }
+//   }
+
+//   return { 
+//     name: title, 
+//     data: results 
+//   };
+// }
+
+// async function main() {
+//   console.log(`Fetching last ${YEARS_BACK} years after ${STOP_YEAR}`);
+
+//   const browser = await puppeteer.launch({ 
+//     headless: false
+//   });
+//   const page    = await browser.newPage();
+
+//   const output = {};
+//   for (const column of COLUMNS) {
+//     output[column.key] = await scrapeColumn(page, column);
+//   }
+
+//   await browser.close();
+//   fs.writeFileSync("result.json", JSON.stringify(output, null, 2));
+//   console.log("\nSaved to result.json");
+// }
+
+// main().catch((err) => {
+//   console.error("Error:", err.message);
+// });
 const puppeteer = require("puppeteer");
 const cheerio   = require("cheerio");
 const fs        = require("fs");
 
-const YEARS_BACK = 3;
+const YEARS_BACK = 2;
 const STOP_YEAR  = new Date().getFullYear() - YEARS_BACK;
+const MAIN_URL   = "https://www.ins.gov.co/buscador-eventos/Paginas/Info-Evento.aspx";
 
-const COLUMNS = [
-  { key: "column1", url: "https://www.ins.gov.co/buscador-eventos/Informesdeevento/Forms/AllItems.aspx" },
-  { key: "column2", url: "https://www.ins.gov.co/buscador-eventos/tablerosdecontrol/Forms/AllItems.aspx" },
-  { key: "column3", url: "https://www.ins.gov.co/buscador-eventos/Tableros%20de%20control%20de%20laboratorio/Forms/AllItems.aspx" },
-];
-
-// Wait for ms milliseconds
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
-// Click a group row to expand it, then wait for new rows to appear
-async function clickAndExpand(page, groupId) {
+// Click the expand link inside a row by its tbody id, then wait for DOM to update
+async function clickAndExpand(page, tbodyId) {
   await page.evaluate((id) => {
-    document.querySelectorAll(`a[onclick*="'${id}'"]`).forEach((a) => a.click());
-  }, groupId);
+    document.querySelector(`#${id} a`)?.click();
+  }, tbodyId);
   await delay(2500);
 }
 
-// Parse the page HTML with cheerio and return year groups + their events
-function parseYearGroups(html) {
-  const $      = cheerio.load(html);
+// Parse year groups  and events from one column using ms-gb / ms-gb2 selectors
+function parseYearGroups(columnHtml) {
+  const $ = cheerio.load(columnHtml);
   const groups = [];
   let current  = null;
 
-  $("tr").each((_, row) => {
-    const text      = $(row).text().trim();
-    const toggle    = $(row).find('a[onclick*="ExpCollGroup"]');
-    if (!toggle.length) return;
+  // ms-gb  = year header row
+  // ms-gb2 = event header row
+  $("td.ms-gb, td.ms-gb2").each((_, td) => {
+    const tbodyId = $(td).closest("tbody").attr("id") ?? "";
+    const text    = $(td).text().trim();
 
-    const onclickVal   = toggle.attr("onclick") ?? "";
-    const groupIdMatch = onclickVal.match(/ExpCollGroup\('([^']+)'/);
-    if (!groupIdMatch) return;
-    const groupId = groupIdMatch[1];
-
-    // Is this a year row?
-    const yearMatch = text.match(/Año\s*:\s*(\d{4})\s*\(/);
-    if (yearMatch) {
+    if ($(td).hasClass("ms-gb")) {
+      // Year row
+      const yearMatch = text.match(/(\d{4})/);
+      if (!yearMatch) return;
       const year = parseInt(yearMatch[1]);
-      current = year > STOP_YEAR ? { year, groupId, events: [] } : null;
+      current = year > STOP_YEAR ? { year, tbodyId, events: [] } : null;
       if (current) groups.push(current);
-      return;
-    }
-
-    // Is this an event row under the current year?
-    const eventMatch = text.match(/Evento\s*:\s*(.+?)\s*\(\d+\)/);
-    if (eventMatch && current) {
-      current.events.push({ name: eventMatch[1].trim(), groupId });
+    } else if ($(td).hasClass("ms-gb2") && current) {
+      // Event row
+      const eventMatch = text.match(/Evento\s*:\s*(.+?)\s*\(\d+\)/);
+      if (eventMatch) current.events.push({ name: eventMatch[1].trim(), tbodyId });
     }
   });
 
   return groups.sort((a, b) => b.year - a.year);
 }
 
-// After expanding a group, grab only the visible file links
-function getVisibleLinks(html) {
+// Get all visible file links 
+function getLinks(html) {
   const $ = cheerio.load(html);
   const links = [];
-
+  // ms-gb and ms-gb2 are header rows rest everything else is a file row
   $("tr").each((_, row) => {
-    // Skip group/toggle rows
-    if ($(row).find('a[onclick*="ExpCollGroup"]').length) return;
-    // Skip hidden rows
-    if ($(row).css("display") === "none") return;
+    if ($(row).find("td.ms-gb, td.ms-gb2").length) return;
 
     $(row).find("a[href]").each((_, a) => {
       const href = $(a).attr("href") ?? "";
       const name = $(a).text().trim();
-      if (href && !href.startsWith("javascript") && href.includes("/buscador-eventos") && name.length > 0) {
+      if (!href.startsWith("javascript") && href.includes("/buscador-eventos") && name) {
         links.push({ name, url: href.startsWith("http") ? href : `https://www.ins.gov.co${href}` });
       }
     });
@@ -273,64 +436,83 @@ function getVisibleLinks(html) {
   return links;
 }
 
-// Scrape one column URL and return structured data
-async function scrapeColumn(page, column) {
-  console.log(`\nScraping ${column.key}...`);
-  await page.goto(column.url, { waitUntil: "domcontentloaded", timeout: 60000 });
-  await delay(3000);
+// Click a group open and return only the links that newly appeared
+async function expandAndCollect(page, tbodyId) {
+  const before = new Set((await getPageLinks(page)).map((l) => l.url));
+  await clickAndExpand(page, tbodyId);
+  return (await getPageLinks(page)).filter((l) => !before.has(l.url));
+}
 
-  const title      = (await page.title()).split(" - ")[0].trim() || column.key;
-  const yearGroups = parseYearGroups(await page.content());
-  const results    = {};
+async function getPageLinks(page) {
+  return getLinks(await page.content());
+}
 
+// Scrape one column by its index (0, 1, 2) on the page
+async function scrapeColumn(page, colIndex) {
+  const key = `column${colIndex + 1}`;
+ 
+  const title = await page.evaluate((i) => {
+    const col = document.querySelectorAll(".ms-rtestate-read.ms-rte-wpbox")[i];
+    return col?.querySelector("h2, h3, h4, strong")?.textContent?.trim() ?? `column${i + 1}`;
+  }, colIndex);
+ 
+  console.log(`\nScraping ${key}: ${title}`);
+ 
+  const colHtml = await page.evaluate((i) => document.querySelectorAll(".ms-rtestate-read.ms-rte-wpbox")[i]?.innerHTML ?? "", colIndex);
+  const yearGroups = parseYearGroups(colHtml);
+  const results = {};
+ 
   for (const yr of yearGroups) {
-    console.log(`  Year ${yr.year} — ${yr.events.length} event(s)`);
+    console.log(`Year ${yr.year} — ${yr.events.length} event(s)`);
     results[yr.year] = [];
+ 
+    const items = yr.events.length === 0
+      ? [{ name: "no_events_only_files", tbodyId: yr.tbodyId }]
+      : yr.events;
+ 
+    for (const item of items) {
+      const docs = await expandAndCollect(page, item.tbodyId);
+      console.log(`[${item.name}] → ${docs.length} file(s)`);
+      results[yr.year].push({ event: item.name, documents: docs });
+    }
+  }
+ 
+  return { 
+    name: title, 
+    data: results 
+  };
+}
 
-    if (yr.events.length === 0) {
-      // No events under this year — expand the year directly
-      const before = getVisibleLinks(await page.content()).map((l) => l.url);
-      await clickAndExpand(page, yr.groupId);
-      const after = getVisibleLinks(await page.content()).filter((l) => !before.includes(l.url));
-      console.log(`    (direct) → ${after.length} file(s)`);
-      results[yr.year].push({ event: "(direct)", documents: after });
-    } else {
-      for (const ev of yr.events) {
-        const before = getVisibleLinks(await page.content()).map((l) => l.url);
-        await clickAndExpand(page, ev.groupId);
-        const after = getVisibleLinks(await page.content()).filter((l) => !before.includes(l.url));
-        console.log(`    [${ev.name}] → ${after.length} file(s)`);
-        results[yr.year].push({ event: ev.name, documents: after });
-      }
+
+async function main() {
+  console.log(`Fetching last ${YEARS_BACK} years after ${STOP_YEAR}`);
+
+  const browser = await puppeteer.launch({ 
+    headless: false 
+  });
+  const page = await browser.newPage();
+
+  await page.goto(MAIN_URL, { 
+    waitUntil: "networkidle2", 
+    timeout: 90000 
+  });
+
+  const colCount = await page.evaluate(() => document.querySelectorAll(".ms-rtestate-read.ms-rte-wpbox").length);
+  console.log(`Found ${colCount} column(s)`);
+
+  const output = {};
+  for (let i = 0; i < colCount; i++) {
+    const col = await scrapeColumn(page, i);
+    if (Object.keys(col.data).length > 0) {
+      output[`column${i + 1}`] = col;
     }
   }
 
-  return { name: title, data: results };
-}
-
-// Main
-async function main() {
-  console.log(`Fetching last ${YEARS_BACK} years (after ${STOP_YEAR})`);
-
-  const browser = await puppeteer.launch({ headless: false });
-  const page    = await browser.newPage();
-
-  // Skip images/fonts to speed things up
-  await page.setRequestInterception(true);
-  page.on("request", (req) =>
-    ["image", "font", "media", "stylesheet"].includes(req.resourceType())
-      ? req.abort()
-      : req.continue()
-  );
-
-  const output = {};
-  for (const column of COLUMNS) {
-    output[column.key] = await scrapeColumn(page, column);
-  }
-
   await browser.close();
-  fs.writeFileSync("results.json", JSON.stringify(output, null, 2));
-  console.log("\nDone! Saved to results.json");
+  fs.writeFileSync("result.json", JSON.stringify(output, null, 2));
+  console.log("\nSaved to result.json");
 }
 
-main();
+main().catch((err) => {
+  console.error("Error:", err.message);
+});
