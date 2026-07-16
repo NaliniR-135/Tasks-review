@@ -23,8 +23,8 @@ async function scrapeBulletin() {
   notices.each((_, el) => {
     const $p = $(el);
 
-    const chapter = cleanText($p.prevAll("h3").first().text()).replace(/^[A-Z]\.\s*/, "");//chapter value from this
-    const section = cleanText($p.prevAll("h4:not([align])").first().text()); //section values from this
+    const chapter = cleanText($p.prevAll("h3").first().text()).replace(/^[A-Z]\.\s*/, "");//chapter name from this
+    const section = cleanText($p.prevAll("h4:not([align])").first().text()); //section name from this
 
     const content = $p
       .nextUntil("p:has(a[name])")
