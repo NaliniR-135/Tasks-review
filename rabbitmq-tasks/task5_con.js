@@ -12,10 +12,7 @@ async function main() {
   const connection = await amqp.connect('amqp://localhost');
   const channel = await connection.createChannel();
   await channel.assertQueue(QUEUE_NAME);
-
-  // Dont hand this consumer a new message until it has acked the previous one.
-  channel.prefetch(1);
-
+  
   console.log(`${CONSUMER_NAME} waiting for messages. CTRL+C to stop.`);
 
   channel.consume(QUEUE_NAME, async (msg) => {
