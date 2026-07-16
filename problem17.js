@@ -101,18 +101,15 @@ function extractSections(html) {
   );
 
   if (startIdx === -1) {
-    const found = allH2.map((h) => $(h).text().trim());
     console.warn("Could not locate the first project heading.");
-    console.warn("All <h2> texts found:", found);
-    return [];
   }
 
   const { parent } = allH2[startIdx];
 
   return allH2
     .slice(startIdx)
-    .filter((h2) => h2.parent === parent)
-    .map((h2) => parseSection($, h2))
+    .filter((h2) => h2.parent === parent)//finds all the other h2 that has the same parent h2
+    .map((h2) => parseSection($, h2))//proper structure is given as title and content
     .sort((a, b) => a.title.localeCompare(b.title));
 }
 
