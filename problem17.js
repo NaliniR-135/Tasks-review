@@ -87,8 +87,7 @@ const WHITESPACE_RE = /\s+/g;
 
 async function fetchHtml(url) {
   const { data } = await axios.get(url, {
-    timeout: 15_000,
-    headers: { "User-Agent": "Mozilla/5.0 (compatible; fda-scraper/1.0)" },
+    timeout: 15000
   });
   return data;
 }
@@ -125,7 +124,7 @@ function parseSection($, h2El) {
 
   $h2.nextUntil("h2").each((_, el) => {
     const text = $(el).text().trim();
-    if (!text || MORE_INFO_RE.test(text)) return false; // false stops .each()
+    if (!text || MORE_INFO_RE.test(text)) return false; 
     contentParts.push(text);
   });
 
