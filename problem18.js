@@ -23,15 +23,15 @@ async function scrapeBulletin() {
   notices.each((_, el) => {
     const $p = $(el);
 
-    const chapter = cleanText($p.prevAll("h3").first().text()).replace(/^[A-Z]\.\s*/, "");
-    const section = cleanText($p.prevAll("h4:not([align])").first().text()); // <-- fix
+    const chapter = cleanText($p.prevAll("h3").first().text()).replace(/^[A-Z]\.\s*/, "");//chapter value from this
+    const section = cleanText($p.prevAll("h4:not([align])").first().text()); //section values from this
 
     const content = $p
       .nextUntil("p:has(a[name])")
-      .map((_, node) => cleanText($(node).text()))
-      .get()
-      .filter(Boolean)
-      .join(" ");
+      .map((_, node) => cleanText($(node).text()))//returns pobjects 
+      .get()//converts objects to js array
+      .filter(Boolean)//removes the empty string from the array
+      .join(" ");//we join all the pieces of contents to form full content
 
     result[chapter] ??= {};
     result[chapter][section] ??= [];

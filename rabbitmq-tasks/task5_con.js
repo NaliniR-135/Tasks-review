@@ -13,7 +13,7 @@ async function main() {
   const channel = await connection.createChannel();
   await channel.assertQueue(QUEUE_NAME);
 
-  // Don't hand this consumer a new message until it has acked the previous one.
+  // Dont hand this consumer a new message until it has acked the previous one.
   channel.prefetch(1);
 
   console.log(`${CONSUMER_NAME} waiting for messages. CTRL+C to stop.`);
