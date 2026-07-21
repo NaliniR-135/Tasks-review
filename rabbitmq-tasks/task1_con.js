@@ -1,6 +1,6 @@
 const amqp = require('amqplib');
 
-const QUEUE_NAME = 'hello-queue';
+const QUEUE_NAME = 'hello-queue-27';
 
 async function main() {
   const connection = await amqp.connect('amqp://localhost');
