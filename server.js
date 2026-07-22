@@ -11,7 +11,6 @@ async function start() {
   await seedQueue();
 
   setInterval(processQueue, POLL_EVERY);
-  console.log(`Server polling every ${POLL_EVERY / 1000}s`);
 
   const app = express();
   app.get('/', (_req, res) => res.json({ status: 'ok' }));
