@@ -5,7 +5,7 @@ async function main() {
   const client = createClient({ url: 'redis://localhost:6379' });
   await client.connect();
 
-  const SET_KEY = 'unique-visitors';
+  const SET_KEY = 'visitor2:unique-visitors';
 
   // SEND — add names to the set
   await client.sAdd(SET_KEY, 'Alice');
