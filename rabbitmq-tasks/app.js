@@ -6,7 +6,7 @@ const cheerio = require('cheerio');
 const QUEUE = process.env.QUEUE_NAME;
 const RABBITMQ_URL = process.env.RABBITMQ_URL;
 const BASE_URL = 'https://www.gov.uk';
-const RECONNECT = 3000;//wait for 5seconds before trying the dead connection
+const RECONNECT = 3000;//wait for 3seconds before trying the dead connection
 const DELAY = 2000;//we wait for 2seconds before pushing a new url into queue
 
 const seen = new Set();
@@ -25,19 +25,19 @@ async function init() {//used to create the connection and reconnect after resta
       conn.on('close', () => {
         console.warn('amqp disconnected, trying to reconnect');
         ch = null;
-        setTimeout(connect, RECONNECT);
+        setTimeout(connect, RECONNECT);//initially connected and then closed, we are retrying the connection after 3seconds
       });
       conn.on('error', err => console.error('amqp error:', err.message));
     } catch (err) {
       console.error('amqp init failed:', err.message);
-      setTimeout(connect, RECONNECT);
+      setTimeout(connect, RECONNECT);//we try reconnecting after 3seconds if the initial connection only failed
     }
   };
   await connect();
 }
 
-async function scrapeAndQueue(pageUrl) {
-  const { data } = await axios.get(pageUrl, { responseType: 'text' });
+async function scrapeAndQueue(pageUrl) {//scrape the urls and push to queue with 2seconds delay
+  const { data } = await axios.get(pageUrl);
   const $ = cheerio.load(data);
 
   const urls = $(".gem-c-document-list__item-title a")
@@ -48,11 +48,10 @@ async function scrapeAndQueue(pageUrl) {
   console.log(`scrapeAndQueue: ${urls.length} new urls found`);
 
   for (const url of urls) {
-    if (!ch) { await sleep(RECONNECT); continue; }
     seen.add(url);
     ch.sendToQueue(QUEUE, Buffer.from(url), { persistent: true });
     console.log('scrapeAndQueue: queued:', url);
-    await sleep(DELAY);
+    await sleep(DELAY);//2seconds delay before we push a new url into the queue
   }
 }
 
