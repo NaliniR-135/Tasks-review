@@ -5,7 +5,7 @@ async function main() {
   const client = createClient({ url: 'redis://localhost:6379' });
   await client.connect();
 
-  const LIST_KEY = 'visitors';
+  const LIST_KEY = 'visitor1:visitors';
 
   // SEND — push names onto the list
   await client.rPush(LIST_KEY, 'Alice');
